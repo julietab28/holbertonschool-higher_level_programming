@@ -2,4 +2,4 @@
 
 str = "Holberton School"
 
-print(str * 3, "\n{}".format(str[:9]))
+print(str * 3,"\n{}".format(str[:9]))
