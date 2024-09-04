@@ -2,4 +2,4 @@
 
 number = 3.14159
 
-print("{:.3}".format(number))
+print("{0:.2f}".format(number))
