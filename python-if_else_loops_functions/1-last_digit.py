@@ -13,13 +13,13 @@ if number > 0:
 
     if last_digit > 5:
         print("Last digit of {}".format(number),
-        "is {}".format(last_digit), "and is greater than 5")
+            "is {}".format(last_digit), "and is greater than 5")
     elif last_digit < 6 and last_digit != 0:
         print("Last digit of {}".format(number),
-        "is {}".format(last_digit), "and is less than 6 and not 0")
+            "is {}".format(last_digit), "and is less than 6 and not 0")
     elif last_digit == 0:
         print("Last digit of {}".format(number),
-        "is {}".format(last_digit), "and is 0")
+            "is {}".format(last_digit), "and is 0")
 else:
     if number <= -10000:
         last_neg_digit = ((((number % -10000) % -1000) % -100) % -10)
@@ -32,10 +32,10 @@ else:
 
     if last_neg_digit > 5:
         print("Last digit of {}".format(number), 
-        "is {}".format(last_neg_digit), "and is greater than 5")
+            "is {}".format(last_neg_digit), "and is greater than 5")
     elif last_neg_digit < 6 and last_neg_digit != 0:
         print("Last digit of {}".format(number),
-        "is {}".format(last_neg_digit), "and is less than 6 and not 0")
+            "is {}".format(last_neg_digit), "and is less than 6 and not 0")
     elif last_neg_digit == 0:
         print("Last digit of {}".format(number),
-        "is {}".format(last_neg_digit), "and is 0")
+            "is {}".format(last_neg_digit), "and is 0")
