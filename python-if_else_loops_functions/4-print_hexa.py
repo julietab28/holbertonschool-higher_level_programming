@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
 for i in range(0, 99):
-    if i >= 10 and i <= 15:
-        print("{} =".format(i), "{}".format(hex(i)))
+    print("{} =".format(i), "{}".format(hex(i)))
+    # if i >= 10 and i <= 15:
+    #     print("{} =".format(i), "{}".format(hex(i)))
 
-    else:
-        print("{}".format(i), "= 0x{}".format(i))
+    # else:
+    #     print("{}".format(i), "= 0x{}".format(i))
 
 # for i in range(0, 10):
 #     print("{}".format(i), "= 0x{}".format(i))
