@@ -11,10 +11,13 @@ def print_last_digit(number):
             last_digit = number % 10
 
         if last_digit > 5:
+            print("{}".format(last_digit))
             return last_digit
         elif last_digit < 6 and last_digit != 0:
+            print("{}".format(last_digit))
             return last_digit
         elif last_digit == 0:
+            print("{}".format(last_digit))
             return last_digit
     else:
         if number <= -10000:
@@ -27,8 +30,11 @@ def print_last_digit(number):
             last_neg_digit = number % -10
 
         if last_neg_digit > 5:
+            print("{}".format(last_neg_digit))
             return last_neg_digit
         elif last_neg_digit < 6 and last_neg_digit != 0:
+            print("{}".format(last_neg_digit))
             return last_neg_digit
         elif last_neg_digit == 0:
+            print("{}".format(last_neg_digit))
             return last_neg_digit
