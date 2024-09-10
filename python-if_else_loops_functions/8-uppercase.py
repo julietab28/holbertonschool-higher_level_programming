@@ -6,7 +6,7 @@ def uppercase(str):
             palabra += letter
         elif ord(letter) == 32:
             palabra += letter 
-        elif chr(letter) >= "0" and chr(letter) <= "9":
+        elif letter >= 0 and letter <= 9:
             palabra += letter   
         else:
             palabra += chr(ord(letter) - 32)
