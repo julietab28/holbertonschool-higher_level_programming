@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def add(a, b):
-    return sum(a + b)
+    sum = a + b
+    return sum
