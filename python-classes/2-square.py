@@ -22,7 +22,7 @@ class Square:
 
         Args:
             size (int): El tamaño del lado del cuadrado. Por defecto es 0
-    
+
         Raises:
             ValueError: Si size no es un entero o es menor que 0
         """
