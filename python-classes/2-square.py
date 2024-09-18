@@ -26,10 +26,10 @@ class Square:
         Raises:
             ValueError: Si size no es un entero o es menor que 0
         """
-        if isinstance(self.size, int):
-            if self.size < 0:
-                raise ValueError("size must be >= 0")
-        else:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
+
+        if size < 0:
+            raise ValueError("size must be >= 0")
 
         self.__size = size
