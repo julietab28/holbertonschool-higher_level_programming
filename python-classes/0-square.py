@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Este modulo crea una clase Square 
+Este modulo crea una clase Square
 """
 
 
