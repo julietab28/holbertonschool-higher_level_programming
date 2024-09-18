@@ -26,17 +26,10 @@ class Square:
         Raises:
             ValueError: Si size no es un entero o es menor que 0
         """
-        self.__size = size
-
-    def is_int(self):
-        """
-        Verifica si el tamaño del cuadrado es un entero no negativo
-
-        Raises:
-            ValueError: Si el tamaño no es un entero o es menor que 0
-        """
         if isinstance(self.size, int):
             if self.size < 0:
                 raise ValueError("size must be >= 0")
         else:
             raise TypeError("size must be an integer")
+
+        self.__size = size
