@@ -14,7 +14,7 @@ class Square:
     Métodos:
         __init__(self, size=0): Inicializa una instancia de la clase Square
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0, area):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         else:
@@ -23,5 +23,4 @@ class Square:
 
         self.__size = size
     def area(size):
-        sq_area = size * size
-        return sq_area
+        return size * size
