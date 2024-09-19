@@ -14,7 +14,16 @@ class Square:
     Métodos:
         __init__(self, size=0): Inicializa una instancia de la clase Square
     """
-    def __init__(self, size=0, area):
+    def __init__(self, size=0):
+        """
+        Inicializa un nuevo objeto Square con el tamaño especificado
+
+        Args:
+            size (int): El tamaño del lado del cuadrado. Por defecto es 0
+
+        Raises:
+            ValueError: Si size no es un entero o es menor que 0
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         else:
