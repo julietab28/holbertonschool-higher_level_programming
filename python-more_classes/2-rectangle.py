@@ -8,7 +8,7 @@ class Rectangle:
     """
     Clase que representa un rectangulo
     """
-    def __init__(self, width = 0, height=0):
+    def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
 
@@ -22,7 +22,8 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-        Setter. Permite modificar el atributo, le asignamos un nuevo valor a width
+        Setter. Permite modificar el atributo, 
+        le asignamos un nuevo valor a width
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -37,11 +38,12 @@ class Rectangle:
         Getter
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
-        Setter. Permite modificar el atributo, le asignamos un nuevo valor a height 
+        Setter. Permite modificar el atributo, 
+        le asignamos un nuevo valor a height 
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
