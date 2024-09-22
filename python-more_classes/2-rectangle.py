@@ -22,7 +22,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-        Setter. Permite modificar el atributo, 
+        Setter. Permite modificar el atributo,
         le asignamos un nuevo valor a width
         """
         if not isinstance(value, int):
@@ -42,8 +42,8 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """
-        Setter. Permite modificar el atributo, 
-        le asignamos un nuevo valor a height 
+        Setter. Permite modificar el atributo,
+        le asignamos un nuevo valor a height
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -59,4 +59,4 @@ class Rectangle:
         if self.__height <= 0 or self.__width <= 0:
             return 0
         else:
-            return (self.__height + self.__height) + (self.__width + self.__width)
+            return (2 * self.__height) + (2 * self.__width)
