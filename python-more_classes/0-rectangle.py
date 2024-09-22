@@ -3,6 +3,7 @@
 Creacion de una clase Rectangulo que repreasenta un rectangulo
 """
 
+
 class Rectangle:
     """
     Clase vacia
