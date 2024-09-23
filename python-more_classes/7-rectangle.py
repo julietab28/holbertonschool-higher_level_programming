@@ -71,7 +71,7 @@ class Rectangle:
         else:
             array = []
             for _ in range(self.__height):
-                array.append(self.print_symbol * self.__width)
+                array.append(str(self.print_symbol) * self.__width)
 
             rect = '\n'.join(array)
             return rect
