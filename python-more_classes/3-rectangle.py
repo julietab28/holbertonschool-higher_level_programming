@@ -66,4 +66,4 @@ class Rectangle:
             return ""
         else:
             return "\n".join('#' * self.__width for _ in range(self.__height))
-       
+  
