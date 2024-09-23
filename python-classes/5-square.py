@@ -43,4 +43,4 @@ class Square:
                 array.append('#' * self.__size)
 
             sq = '\n'.join(array)
-            return sq
+            print(sq)
