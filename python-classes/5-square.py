@@ -39,7 +39,7 @@ class Square:
             print("")
         else:
             array = []
-            for _ in range(self.__size):
+            for _ in range('#' * self.__size):
                 array.append(self.__size)
 
             sq = '\n'.join(array)
