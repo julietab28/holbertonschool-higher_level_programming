@@ -5,4 +5,7 @@ Clase lookup
 
 
 def lookup(obj):
+    """
+    Class lookup
+    """
     list = dir(obj)
