@@ -9,3 +9,4 @@ def lookup(obj):
     Class lookup
     """
     list = dir(obj)
+    return list
