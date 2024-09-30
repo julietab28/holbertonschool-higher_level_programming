@@ -15,4 +15,4 @@ def is_kind_of_class(obj, a_class):
     Returns:
         bool: True si 'obj' es una instancia de 'a_class' o de una subclase de 'a_class', False en caso contrario.
     """
-    retrun isinstance(obj, a_class)
+    return isinstance(obj, a_class)
