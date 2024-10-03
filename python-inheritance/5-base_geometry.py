@@ -4,7 +4,7 @@ Modulo de una clase
 """
 
 
-def BaseGeometry():
+class BaseGeometry:
     """
     Empty class
     """
