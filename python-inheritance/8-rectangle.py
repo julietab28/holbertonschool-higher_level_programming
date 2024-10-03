@@ -23,9 +23,9 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
-class Rectangle:
+class Rectangle(BaseGeometry):
         """
-        Clase que representa un rectangulo
+        Clase que hereda de BaseGeometry, representa un rectangulo
         """
         def __init__(self, width, height):
             """
