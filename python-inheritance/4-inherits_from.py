@@ -6,7 +6,8 @@ Módulo que define la función is_kind_of_class.
 
 def inherits_from(obj, a_class):
     """
-    Verifica si un objeto es una instancia de una clase que heredó (directa o indirectamente) 
+    Verifica si un objeto es una instancia de una
+    clase que heredó (directa o indirectamente)
     de una clase especificada.
 
     Parámetros:
