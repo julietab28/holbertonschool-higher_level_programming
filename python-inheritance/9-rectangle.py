@@ -23,6 +23,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     Clase que hereda de BaseGeometry, representa un rectangulo
