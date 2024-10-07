@@ -3,7 +3,7 @@
 Modulo de clase Shape
 """
 from abc import ABC, abstractmethod
-from math import math
+from math import pi
 
 
 class Shape(ABC):
