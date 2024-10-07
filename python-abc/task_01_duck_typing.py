@@ -2,7 +2,7 @@
 """
 Modulo de clase Shape
 """
-from abc import ACB, abstractmethod
+from abc import ABC, abstractmethod
 from math import math
 
 
