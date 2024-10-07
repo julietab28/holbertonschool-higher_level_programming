@@ -2,9 +2,8 @@
 """
 Modulo de una clase
 """
-
-
 Rectangle = __import__('8-rectangle').Rectangle
+
 
 class Rectangle(BaseGeometry):
         """
