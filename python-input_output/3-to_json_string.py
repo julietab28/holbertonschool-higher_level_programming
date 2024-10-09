@@ -9,6 +9,5 @@ def to_json_string(my_obj):
     """
     Funcion que retorna la representacion de un objeto JSON
     """
-    with open(my_obj, 'r', encoding="utf-8") as x:
-        x = json.dumps(my_obj)
-        return x
+    x = json.dumps(my_obj)
+    return x
