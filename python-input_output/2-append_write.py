@@ -10,5 +10,5 @@ def append_write(filename="", text=""):
     al final de un archivo
     """
     with open(filename, 'a', encoding="utf-8") as f:
-        file = f.write
+        file = f.write()
         return len(text)

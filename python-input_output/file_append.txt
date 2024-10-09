@@ -1,1 +1,1 @@
-This School is so cool!
+Holberton School is so cool!\n
