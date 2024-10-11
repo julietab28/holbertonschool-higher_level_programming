@@ -18,7 +18,7 @@ def fetch_and_save_posts():
     if resp.status_code == 200:
         dic = resp.json()
 
-        with open('post.csv', 'w', encoding="utf-8") as csvfile:
+        with open('posts.csv', 'w', encoding="utf-8") as csvfile:
             fieldnames = ["id", "title", "body"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
