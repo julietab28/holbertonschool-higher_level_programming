@@ -5,7 +5,7 @@ import requests, json, csv
 def fetch_and_print_posts():
     resp = requests.get('https://jsonplaceholder.typicode.com/posts')
 
-    print("Status code: {}".format(resp.status_code))
+    print("Status Code: {}".format(resp.status_code))
 
     if resp.status_code == 200:
         dic = resp.json()
