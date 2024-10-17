@@ -16,7 +16,7 @@ def home():
 #LISTA DE USUARIOS
 @app.route('/data', methods=['GET'])
 def users():
-    return jsonify(list(dic_users.keys()))
+    return jsonify(list(dic_users.keys())), 200
 
 #ESTADO
 @app.route('/status')
@@ -30,7 +30,7 @@ def get_username(username):
     if username:
         return jsonify(user)
     else:
-        return ({"error": "User not found"})
+        return ({"error": "User not found"}, 404)
 
 #AGRREGAR USUARIO
 @app.route('/add_user', methods=['POST'])
@@ -54,7 +54,7 @@ def add_user():
 
     return jsonify({"message": "User added",
         "user": dic_users[username]
-        })
+        }), 201
 
 
 if __name__ == '__main__':
