@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import json, requests
-from flask import Flask, jsonify
+import json
+from flask import Flask, jsonify, request
 
 
 app = Flask(__name__)
@@ -35,7 +35,7 @@ def get_username(username):
 #AGRREGAR USUARIO
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    data = request.get_json(dic_users)
+    data = request.get_json()
 
     username = data.get('username')
     name = data.get('name')
@@ -51,6 +51,10 @@ def add_user():
         'age': age,
         'city': city
     }
+
+    return jsonify({"message": "User added",
+        "user": dic_users[username]
+        })
 
 
 if __name__ == '__main__':
