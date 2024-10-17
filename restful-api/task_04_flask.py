@@ -27,11 +27,11 @@ def status():
 @app.route('/users/<string:username>', methods=['GET'])
 def get_username(username):
     user = dic_users.get(username)
-    if username:
-        return jsonify(user)
-    else:
+    if username not in dic_users:
         return ({"error": "User not found"}, 404)
-
+    else:
+        return jsonify(user)
+        
 #AGRREGAR USUARIO
 @app.route('/add_user', methods=['POST'])
 def add_user():
