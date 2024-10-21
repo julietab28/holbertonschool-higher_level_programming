@@ -56,6 +56,5 @@ def add_user():
         "user": dic_users[username]
         }), 201
 
-
 if __name__ == '__main__':
     app.run(debug=True)
