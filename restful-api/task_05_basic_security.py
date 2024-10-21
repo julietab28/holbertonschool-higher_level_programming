@@ -65,9 +65,9 @@ def auth_token():
 def admin_only():
     curent_user = get_jwt_identity()
     if curent_user['role'] == 'admin':
-        return "Admin Access Granted", 200
+        return "Admin Access: Granted", 200
     else:
-        return jsonify({"error": "Admin Access Required"}), 403
+        return jsonify({"error": "Admin access required"}), 403
 
 @jwt.unauthorized_loader
 def handle_unauthorized_error(err):
