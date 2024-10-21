@@ -38,23 +38,24 @@ def verify_password(username, password):
 @app.route('/basic-protected', methods=['GET'])
 @auth.login_required
 def authenticator():
-    return ("Basic Auth: Access Granted"), 200
+    return "Basic Auth: Access Granted", 200
 
 @app.route('/login', methods=['POST'])
 def login():
-    r = request.get_json()
+    r: dict = request.get_json()
     user = users.get(r.get('username'))
-    payload = {
-            "username": user['username'],
-            "role": user['role']
-        }
-    if user and check_password_hash(user['password'], r.get('password')):
-        token = create_access_token(identity=payload)
-        return jsonify(access_token=token), 200
-    else:
-        return jsonify({"invalid username or password "}), 401
 
-@app.route('/jwt-protected', methods=['GET'])
+    if not user or not check_password_hash(user.get("password"), r.get("password")):
+        return jsonify({"error":"invalid username or password"}), 401
+        
+    payload = {
+        "username": user['username'],
+        "role": user['role']
+    }
+    token = create_access_token(identity=payload)
+    return jsonify(access_token=token), 200
+
+@app.route('/jwt-protected')
 @jwt_required()
 def auth_token():
     return "JWT Auth: Access Granted", 200
