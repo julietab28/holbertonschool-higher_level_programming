@@ -56,13 +56,13 @@ def login(username, password):
 @app.route('/jwt-protected', methods=['GET'])
 @jwt_required()
 def auth_token():
-    return ("JWT Auth: Access Granted"), 200
+    return "JWT Auth: Access Granted", 200
 
 @app.route('/admin-only', methods=['GET'])
 @jwt_required()
 def admin_only():
     curent_user = get_jwt_identity()
-    return ("Admin Access Granted"), 200
+    return "Admin Access Granted", 200
 
 @jwt.unauthorized_loader
 def handle_unauthorized_error(err):
