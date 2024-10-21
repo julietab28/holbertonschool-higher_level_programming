@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
@@ -41,13 +41,14 @@ def authenticator():
     return ("Basic Auth: Access Granted"), 200
 
 @app.route('/login', methods=['POST'])
-def login(username, password):
-    user = users.get(username)
+def login():
+    r = request.get_json()
+    user = users.get(r.get('username'))
     payload = {
-            "username": "username",
-            "password": "password"
+            "username": user['username'],
+            "role": user['role']
         }
-    if user and check_password_hash(user['password'], password):
+    if user and check_password_hash(user['password'], r.get('password')):
         token = create_access_token(identity=payload)
         return jsonify(access_token=token), 200
     else:
@@ -62,7 +63,10 @@ def auth_token():
 @jwt_required()
 def admin_only():
     curent_user = get_jwt_identity()
-    return "Admin Access Granted", 200
+    if curent_user['role'] == 'admin':
+        return "Admin Access Granted", 200
+    else:
+        return jsonify({"error": "Admin Access Required"}), 403
 
 @jwt.unauthorized_loader
 def handle_unauthorized_error(err):
