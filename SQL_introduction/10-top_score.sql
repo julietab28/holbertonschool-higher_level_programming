@@ -1,4 +1,4 @@
 --
 SELECT score, name FROM second_table;
 
-ORDER BY score DECS;
+ORDER BY score;
